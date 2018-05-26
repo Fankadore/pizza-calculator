@@ -1,0 +1,17 @@
+header {
+  background-color: #dddddd;
+}
+
+/* disable arrows on number input */
+.disable-arrows {
+	appearance: textfield; 
+	-webkit-appearance: textfield;
+  -moz-appearance:textfield;
+}
+.disable-arrows::-webkit-outer-spin-button,
+.disable-arrows::-webkit-inner-spin-button {
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+  margin: 0;
+}
