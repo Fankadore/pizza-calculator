@@ -8,7 +8,6 @@ const inputCost1 = document.querySelector('#input-cost1');
 const inputCost2 = document.querySelector('#input-cost2');
 const textboxOutput = document.querySelector('#textbox-output');
 const buttonCalc = document.querySelector('#button-calc');
-buttonCalc.addEventListener('click', calculatePizza);
 
 function calculatePizza() {
   const size1 = inputSize1.value || 18;
@@ -34,4 +33,5 @@ function calculatePizza() {
   textboxOutput.innerHTML += `${quantity2} x ${size2}" pizza = ${+areaTotal2.toFixed(2)}in² or ${+ratio2.toFixed(2)} x ${size1}" pizzas at £${costPerSquareInch2.toFixed(2)} per square inch`;
 }
 
-calculatePizza();
+buttonCalc.addEventListener('click', calculatePizza);
+window.onload = calculatePizza;
