@@ -27,11 +27,11 @@ function calculatePizza() {
 	const ratio1 = (area1 / area2) * quantity1;
 	const ratio2 = (area2 / area1) * quantity2;
 
-  const costPerSquareInch1 = cost1 / area1;
-  const costPerSquareInch2 = cost2 / area2;
+  const costPerSquareInch1 = (cost1 / quantity1) / area1;
+  const costPerSquareInch2 = (cost2 / quantity2) / area2;
 
-  textboxOutput.innerHTML = `${quantity1} x ${size1}" pizza = ${+areaTotal1.toFixed(2)}in² or ${+ratio1.toFixed(2)} x ${size2}" pizzas at £${+costPerSquareInch1.toFixed(2)} per square inch<br>`;
-  textboxOutput.innerHTML += `${quantity2} x ${size2}" pizza = ${+areaTotal2.toFixed(2)}in² or ${+ratio2.toFixed(2)} x ${size1}" pizzas at £${+costPerSquareInch2.toFixed(2)} per square inch`;
+  textboxOutput.innerHTML = `${quantity1} x ${size1}" pizza = ${+areaTotal1.toFixed(2)}in² or ${+ratio1.toFixed(2)} x ${size2}" pizzas at £${costPerSquareInch1.toFixed(2)} per square inch<br>`;
+  textboxOutput.innerHTML += `${quantity2} x ${size2}" pizza = ${+areaTotal2.toFixed(2)}in² or ${+ratio2.toFixed(2)} x ${size1}" pizzas at £${costPerSquareInch2.toFixed(2)} per square inch`;
 }
 
 calculatePizza();
